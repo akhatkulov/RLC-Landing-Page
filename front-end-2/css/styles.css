@@ -1,0 +1,576 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+button, button:focus, input, input:focus {
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    opacity: 0.9;
+    outline: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(255,192,203,0.2);
+    /* background-image: url("../images/bg%401x.jpg"); */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background-attachment: fixed;
+    height: 100vh;  
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
+    body {
+        background-image: url("../images/bg%402x.jpg");
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.rhombus {
+    --r: 50px;
+    /* the radius */
+    width: 90%;
+    /* the image size */
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: calc(tan(22.5deg)*var(--r));
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%) margin-box;
+    --_g: /calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%, #0000 72%);
+    --_s: calc(100% - (1 - tan(22.5deg))*var(--r));
+    mask:
+      conic-gradient(#000 0 0) no-repeat 50%/var(--_s) var(--_s),
+      top var(--_g) no-repeat space, left var(--_g) space no-repeat;
+  
+  }
+.webinar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.webinar-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: max-content;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0 1.125rem 1.125rem;
+    background-image: linear-gradient(180deg, #F5E8F9 0%, #DFC8E7 49.53%, #F5E7F8 100%);
+}
+
+.webinar-date-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+}
+
+.webinar-date-date {
+    font-family: "Unbounded", Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: #000000;
+}
+
+.purple {
+    color: #D697FD;
+}
+
+.webinar-mentor h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.webinar-mentor span {
+    color: #D697FD;
+}
+
+.webinar-mentor p {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.webinar-main {
+    position: relative;
+    flex-grow: 1;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.webinar-title {
+    width: max-content;
+    padding: 0.625rem 1.5rem;
+    border-radius: 1.75rem;
+    font-family: "Unbounded", Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #34253A;
+    text-align: center;
+    background: linear-gradient(180deg, #F5E8F9 0%, #DFC8E7 49.53%, #F5E7F8 100%);
+}
+
+.webinar-main-mentor img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.webinar-main .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.webinar-main-content {
+    width: 45%;
+}
+
+.opa{
+    width: 55%;
+    height: 100%; 
+}
+.opa .rhombus{
+    text-align: center;
+}
+
+.webinar-main-heading-telegram {
+    font-size: 2.5rem;
+}
+
+.webinar-main-info {
+    width: 32rem;
+    padding-top: 1.25rem;
+}
+
+.webinar-main-info--telegram {
+    width: 32rem;
+    padding-top: 1rem;
+}
+
+.webinar-main-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.webinar-main-title span {
+    color: #9018BE
+}
+
+.webinar-main-title--telegram {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.webinar-main-ul {
+    margin: 0 0 4rem;
+    padding: 2.5rem 0 0;
+    list-style-type: none;
+}
+
+.webinar-main-li {
+    display: flex;
+    align-items: start;
+    margin-bottom: 1.125rem;
+}
+
+.webinar-main-disc {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 1.125rem;
+    border-radius: 50%;
+}
+
+.webinar-main-disc img {
+    width: 100%;
+}
+
+.webinar-main-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.webinar-main-hint strong {
+    color: #FF5D5D;
+}
+
+.webinar-main-button {
+    position: relative;
+    height: 6rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, #A442F0 0%, #CD42F0 100%);
+    color: #FFFFFF;
+    transition: all 0.1s ease;
+    font-family: "Unbounded", sans-serif !important;
+    font-size: 1.75rem;
+    line-height: 35px;
+}
+
+.webinar-telegram-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    height: 6rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, #A442F0 0%, #CD42F0 100%);
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-name: shake-it;
+}
+
+@keyframes shake-it {
+    from, to {
+        transform: translateX(0px);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(-10px);
+    }
+}
+
+.webinar-telegram-button img {
+    width: 2rem;
+    margin-right: 0.75rem;
+}
+
+.webinar-main-mentor {
+    display: none;
+    padding-top: 2rem;
+}
+
+.webinar-main-mentor img {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-alert {
+    display: none;
+    margin-bottom: 1rem;
+    padding: 1.5rem 0;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.form-alert.open {
+    display: block;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 2;
+    display: none;
+    place-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.modal-backdrop--open {
+    display: grid;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 32rem;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 1.125rem;
+}
+
+.form-heading {
+    font-family: "Unbounded", sans-serif;
+    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
+    color: #000000;
+}
+
+.form-heading span {
+    color: #7019FF;
+}
+
+.form-text {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.form-label span {
+    display: block;
+    margin-bottom: 0.625rem;
+    font-size: 1.125rem;
+}
+
+.form-label input {
+    border-radius: 0.75rem;
+    border: 1px solid #BED4DA;
+    background-color: #F3F7F8;
+    font-size: 1.125rem;
+    padding: 0 1.125rem;
+    height: 3.5rem;
+}
+
+.form-button {
+    height: 4rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(180deg, #A442F0 0%, #CD42F0 100%);
+    font-size: 1.5rem;
+    font-family: "Unbounded", sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+
+.form-button[disabled] {
+    background: lightgrey;
+    cursor: not-allowed;
+}
+
+.form-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.mobile-mentor {
+    display: none;
+    padding: 1.5rem 0;
+}
+
+.mobile-mentor img {
+    width: 100%;
+}
+
+.mobile-mentor-inner {
+    padding: 1rem;
+}
+
+.mobile-mentor-inner .webinar-main-button {
+    margin-top: -8rem;
+}
+
+@media (min-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 71.25rem;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .webinar {
+        display: block;
+    }
+
+    body {
+        background-color: #FFF4FF;
+        background-image: none;
+    }
+
+    .desktop-elements {
+        display: none;
+    }
+    .opa{
+        display: none;
+    }
+
+    .mobile-mentor {
+        display: block;
+    }
+
+    .webinar-date {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .webinar-title {
+        margin: 0 auto;
+    }
+
+    .webinar-main-title {
+        text-align: center;
+    }
+
+    .webinar-main {
+        flex-grow: 0;
+        padding-top: 3rem;
+        padding-bottom: 0;
+    }
+
+    .webinar-main--telegram {
+        text-align: center;
+    }
+
+    .webinar-main-content {
+        width: 100%;
+    }
+
+    .webinar-main-info {
+        width: 100%;
+    }
+
+    .webinar-main-info--telegram {
+        width: 100%;
+    }
+
+    .webinar-main-mentor {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .webinar-main-mentor img {
+        width: 100%;
+    }
+
+    .webinar-title {
+        background-position: 85% -2rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1700px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1800px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1900px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+.powered-by {
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    font-family: "Inter", sans-serif;
+    color: #46494e;
+}
