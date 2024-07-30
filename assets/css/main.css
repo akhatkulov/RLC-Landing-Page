@@ -87,6 +87,25 @@ h6 {
   font-family: var(--heading-font);
 }
 
+
+
+.rhombus{
+  --r: 50px;   /* the radius */
+  width: 90%; /* the image size */
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: calc(tan(22.5deg)*var(--r));
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%) margin-box;
+  --_g:/calc(2*var(--r)) calc(2*var(--r)) 
+    radial-gradient(#000 70%,#0000 72%);
+  --_s:calc(100% - (1 - tan(22.5deg))*var(--r));
+  mask:
+    conic-gradient(#000 0 0) no-repeat 50%/var(--_s) var(--_s),
+    top var(--_g) no-repeat space,left var(--_g) space no-repeat;
+  
+}
+
+
 /* PHP Email Form Messages
 ------------------------------*/
 .reg-form .error-message {
@@ -169,7 +188,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #00008B;
   font-size: 15px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
@@ -181,7 +200,7 @@ h6 {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  background: color-mix(in srgb, #00008B, transparent 15%);
 }
 
 @media (max-width: 1200px) {
@@ -280,7 +299,7 @@ h6 {
 .footer .footer-newsletter .newsletter-form input[type=text] {
   margin: 3px;
 
-  border: 2px solid #4154f1;
+  border: 2px solid #00008B;
   border-radius: 15px;
   padding: 10px;
   width: 100%;
@@ -300,7 +319,7 @@ h6 {
   display: block;
   height: 55px;
   /* margin: -7px -8px -7px 0; */
-  background: var(--accent-color);
+  background: #00008B;
   color: var(--contrast-color);
   transition: 0.3s;
   border-radius: 15px;
@@ -414,7 +433,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #00008B;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -428,7 +447,7 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background-color: color-mix(in srgb, #00008B, transparent 20%);
   color: var(--contrast-color);
 }
 
@@ -572,10 +591,17 @@ section,
   font-size: 20px;
   font-weight: 400;
 }
-
+.dl-date{
+  margin: 15px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff !important;
+  background: #00008B !important;
+  display: inline-block;
+}
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #00008B;
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
