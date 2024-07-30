@@ -8,14 +8,22 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" crossorigin="anonymous"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +70,9 @@
             <h1 data-aos="fade-up">Rus tilini o’rganishga vaqtim yo’q degan baxonalardan xalos bo’lasiz!</h1>
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
               <a href="#footer" class="btn-get-started">Boshlash <i class="bi bi-arrow-right"></i></a>
-              <a href="https://instagram.com/42_akhatkulov" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Instagram</span></a>
+              <a href="https://instagram.com/42_akhatkulov"
+                class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i
+                  class="bi bi-play-circle"></i><span>Instagram</span></a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
@@ -72,70 +82,145 @@
         </div>
       </div>
     </section><!-- /Hero Section -->
-    <div class="countdown-container">
-      <div class="countdown" id="countdown">
-          <div class="unit" id="days">
-              00
-              <div class="label">Days</div>
+    <section class="countdown-container">
+      <div class="countdown">
+        <h1 class="countdown_title">2 kunlik Rus tilida 0 dan “разговор”gacha chiqish uchun 5 qadamli master klassga
+        </h1>
+        <div class="block">
+          <div class="bloc-time hours" data-init-value="24">
+            <div class="figure hours hours-1">
+              <span class="top">2</span>
+              <span class="top-back">
+                <span>2</span>
+              </span>
+              <span class="bottom">2</span>
+              <span class="bottom-back">
+                <span>2</span>
+              </span>
+            </div>
+  
+            <div class="figure hours hours-2">
+              <span class="top">4</span>
+              <span class="top-back">
+                <span>4</span>
+              </span>
+              <span class="bottom">4</span>
+              <span class="bottom-back">
+                <span>4</span>
+              </span>
+            </div>
           </div>
-          <div class="unit" id="hours">
-              00
-              <div class="label">Hours</div>
+  
+          <div class="bloc-time min" data-init-value="0">
+            <div class="figure min min-1">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+  
+            <div class="figure min min-2">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
           </div>
-          <div class="unit" id="minutes">
-              00
-              <div class="label">Minutes</div>
-          </div>
-          <div class="unit" id="seconds">
-              00
-              <div class="label">Seconds</div>
-          </div>
-      </div>
-
-      <a href="#footer" class="go-bro">Boshlash <i class="bi bi-arrow-right"></i></a>
-  </div>
-
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Bepul darsda ishtirok etish</h4>
-            <form action="http://127.0.0.1:5000/reg" method="post" class="reg-form">
-              <div class="newsletter-form">
-                <input type="text" name="name" placeholder="Ismingizni kiriting">
-                <hr>
-                <input type="text" name="phone" placeholder="Telefon raqamingiz">
-                <input type="submit" value="Yuborish">
-              </div>
-              <div class="loading">Yuborilmoqda..</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Yuborildi</div>
-            </form>
+  
+          <div class="bloc-time sec" data-init-value="0">
+            <div class="figure sec sec-1">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+  
+            <div class="figure sec sec-2">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <h1 class="countdown_title-end">
+        qoldi!
+      </h1>
+      <a href="#footer" class="go-bro">Boshlash <i class="bi bi-arrow-right"></i></a>
+    </section>
+    <section class="text-section">
+      <div class="my-container">
+        <div class="text-sectioin_frame">
+          <div>
+            <h1>
+              Dars 15 yillik tajribaga hamda 1000 dan ziyod o’quvchilarga ega Rus tili o’qituvchisi Nasiba Jumayeva
+              tomonidan o’tiladi.
+            </h1>
+            <a href="#footer" class="text-container_btn">Boshlash</a>
+          </div>
+          <img src="./assets/img/opa.png" alt="opa">
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
 
-  </footer>
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+              <h4>Bepul darsda ishtirok etish</h4>
+              <form action="forms/newsletter.php" method="post" class="reg-form">
+                <div class="newsletter-form">
+                  <input type="text" name="name" placeholder="Ismingizni kiriting">
+                  <hr>
+                  <input type="text" name="phone" placeholder="Telefon raqamingiz">
+                  <input type="submit" value="Yuborish">
+                </div>
+                <div class="loading">Yuborilmoqda..</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Yuborildi</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </footer>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/control.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/control.js"></script>
 </body>
 
 </html>
