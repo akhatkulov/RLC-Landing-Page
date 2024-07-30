@@ -615,6 +615,7 @@ section,
 }
 
 .hero .btn-get-started {
+  margin-top: 40px;
   color: var(--contrast-color);
   background: #00008B;
   font-family: var(--heading-font);
